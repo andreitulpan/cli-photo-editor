@@ -1,0 +1,50 @@
+# Tulpan Andrei - 314CA
+# Image Editor - Tema 3
+
+    Pentru inceput am impartit programul in mai
+multe fisiere .c pentru o mai buna parcurgere a
+codului. In fisierele .c sunt impartite functiile
+neceasre programului pentru rularea corespunztoare,
+iar in functions.h se afla semnaturile aceastora.
+    In fisierul main.c se verifica comanda 
+primita si se apeleaza functia corespunzatoare 
+sau se afiseaza mesajul de eroare daca comanda 
+nu exista.
+    Pentru comanda LOAD, citesc informatiile
+imaginii din fisier, apoi incarc imaginea in 
+functie de parametrii extrasi din fisier. Daca 
+exista deja o imagine incarcata, aceasta este
+eliberata din memorie.
+    Pentru comanda SELECT, verific parametrii
+acesteia. Daca comanda primeste parametrul ALL
+voi selecta intreaga imagine prin intermediul
+a 4 variabile, iar daca aceasta primeste 4
+coordonate, variabilele vor lua valorile
+corespunzatoare lor.
+    Pentru ROTATE exista 2 cazuri, cand
+este activa selectia "SELECT ALL", si cand
+este activa o selectie, aceasta avand conditia
+de a fi patrata. Pentru cazul in care este
+selectata intreaga imagine se face o copie
+a imaginii si apoi se copiaza la loc in imagine,
+intoarcandu-se in acelasi timp imaginea la
+numarul de grade cerut si se seteaza noile
+dimensiuni ale imaginii. In acelasi mod se
+realizeaza si pentru o matrice patratica,
+doar ca nu dimensiunile imaginii originale
+nu se schimba.
+    Pentru CROP se face o copie a imaginii,
+doar pentru zona selectata, se sterge imaginea
+originala din memorie si i se seteaza adresa
+copiei.
+    Pentru aplicarea filtrelor GRAYSCALE &
+SEPIA, se verifica daca imaginile sunt RGB,
+altfel nu se pot aplica filtrele, apoi se
+fac operatiile necesare pentru fiecare pixel.
+    Pentru comanda SAVE se verifica daca
+primeste parametrul "ascii", astfel salvandu-se
+in format ascii sau daca acest parametru lipseste
+se salveaza in mod prestabilit in format binar.
+    La executarea comenzii EXIT se elibereaza
+intreaga memorie alocata dinamic si se paraseste
+programul.
